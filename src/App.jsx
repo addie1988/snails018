@@ -15,7 +15,7 @@ import Game_3 from './Game_3'
 import Game_4 from './Game_4'
 import Audio from './Audio'
 import Creation from './Creation'
-import Plarium_play from './Plarium_play'
+import Pallium_play from './Pallium_play'
 
 function App() {
   return (
@@ -35,7 +35,7 @@ function App() {
       <Game_4 />
       <Audio />
       <Creation />
-      <Plarium_play />
+      <Pallium_play />
     </>
   )
 }

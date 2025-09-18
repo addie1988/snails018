@@ -3491,24 +3491,106 @@ a:hover
 
     // ============================================================================================= >>   
 
-.plarium_play
+.pallium_play
     position: relative
 
-    .plarium_play_content
+    .pallium_play_content
         margin: 0 auto
         display: flex
         flex-wrap: wrap
-        justify-content: space-between
+        justify-content: space-around
 
-        .plarium_play_content_image
+        .pallium_play_content_image
             position: relative
             width: 40%
 
-        .plarium_play_content_text
+            .pallium_play_content_image_content
+                margin: 0 auto
+
+                .pallium_play_content_image_area
+                    position: relative
+                    box-sizing: border-box
+                    display: flex
+                    padding: 20px
+                    background: linear-gradient(116.71deg, rgba(255, 255, 255, .07), rgba(255, 255, 255, 0) 100.89%)
+                    -webkit-backdrop-filter: blur(15px)
+                    backdrop-filter: blur(15px)
+                    border-radius: 20px
+                    border: 1px solid rgba(167, 167, 167, .4)
+                    position: relative
+                    width: -moz-fit-content
+                    width: fit-content
+
+                    .pallium_play_content_image_area_content
+                        width: 555px
+                        max-height: 564px
+                        overflow: hidden
+                        margin: 0 auto
+                        position: relative
+                        display: flex
+                        flex-wrap: wrap
+                        justify-content: space-between
+                        align-items: flex-start
+
+                        .pallium_play_content_image_area_content_left
+                            position: relative
+                            width: 30%
+                            overflow-y: auto
+
+                            .pallium_play_content_image_area_content_left_content
+                                display: flex
+                                flex-wrap: wrap
+                                justify-content: space-between
+                                align-items: center
+
+                                img
+                                    width: 100%
+                                    position: relative
+                                    top: -1px
+
+                                    &:nth-child(2)
+                                        top: -11px
+                                        left: 0px
+                                        z-index: -1
+
+                        .pallium_play_content_image_area_content_right
+                            position: relative
+                            width: 70%
+                            max-height: 567px
+                            overflow-y: auto
+
+                            .pallium_play_content_image_area_content_right_content
+                                margin: 0 auto
+
+                                img
+                                    width: 100%
+
+                    .pallium_play_content_image_area_content_bottom
+                        position: absolute
+                        top: -40px
+                        right: 100px
+                        box-sizing: border-box
+                        display: flex
+                        flex-direction: column
+                        align-items: flex-start
+                        padding: 22px
+                        background: linear-gradient(116.71deg, rgba(255, 255, 255, .07), rgba(255, 255, 255, .03) 100.89%)
+                        -webkit-backdrop-filter: blur(18px)
+                        backdrop-filter: blur(18px)
+                        border-radius: 14px
+                        border: 1px solid #a2aaad
+
+                        .pallium_play_content_image_area_content_bottom_content
+                            margin: 0 auto
+
+                            img
+                                width: 100%
+
+        .pallium_play_content_text
             position: relative
             width: 40%
 
-            .plarium_play_content_text_content
+            .pallium_play_content_text_content
                 margin: 0 auto
 
                 h1
@@ -3544,3 +3626,21 @@ a:hover
                             position: absolute
                             top: -16px
                             left: 0px
+
+@media screen and (max-width: 1230px)
+    .pallium_play
+        .pallium_play_content
+            justify-content: center
+            .pallium_play_content_image
+                width: 90%
+                .pallium_play_content_image_content
+                    .pallium_play_content_image_area
+                        .pallium_play_content_image_area_content_bottom
+                            right: -140px
+                            top: 0px
+
+            .pallium_play_content_text
+                width: 90%
+                padding-top: 60px
+
+// ============================================================================================= >>    
