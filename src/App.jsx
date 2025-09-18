@@ -18,6 +18,7 @@ import Creation from './Creation'
 import Pallium_play from './Pallium_play'
 import Benefits from './Benefits'
 import Support from './Support'
+import Social from './Social'
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
       <Pallium_play />
       <Benefits />
       <Support />
+      <Social />
     </>
   )
 }
