@@ -1,20 +1,20 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import professionals_content_img_1 from "../src/images/professionals_1.webp";
-import professionals_content_img_2 from "../src/images/professionals_2.webp"; 
-import professionals_content_img_3 from "../src/images/professionals_3.webp";
-import professionals_content_img_4 from "../src/images/professionals_4.webp";
-import professionals_content_img_5 from "../src/images/professionals_5.webp";
-import professionals_content_img_6 from "../src/images/professionals_6.webp";
-import professionals_content_img_7 from "../src/images/professionals_7.webp";
-import professionals_content_img_8 from "../src/images/professionals_8.webp";
-import professionals_content_img_9 from "../src/images/professionals_9.webp";
-import professionals_content_img_10 from "../src/images/professionals_10.webp";
-import professionals_content_img_11 from "../src/images/professionals_11.webp";
-import professionals_content_img_12 from "../src/images/professionals_12.webp";
-import professionals_content_img_13 from "../src/images/professionals_13.webp";
-import professionals_content_img_14 from "../src/images/professionals_14.webp";
-import professionals_content_img_15 from "../src/images/professionals_15.svg";
+import professionals_content_img_1 from "./images/professionals_1.webp";
+import professionals_content_img_2 from "./images/professionals_2.webp"; 
+import professionals_content_img_3 from "./images/professionals_3.webp";
+import professionals_content_img_4 from "./images/professionals_4.webp";
+import professionals_content_img_5 from "./images/professionals_5.webp";
+import professionals_content_img_6 from "./images/professionals_6.webp";
+import professionals_content_img_7 from "./images/professionals_7.webp";
+import professionals_content_img_8 from "./images/professionals_8.webp";
+import professionals_content_img_9 from "./images/professionals_9.webp";
+import professionals_content_img_10 from "./images/professionals_10.webp";
+import professionals_content_img_11 from "./images/professionals_11.webp";
+import professionals_content_img_12 from "./images/professionals_12.webp";
+import professionals_content_img_13 from "./images/professionals_13.webp";
+import professionals_content_img_14 from "./images/professionals_14.webp";
+import professionals_content_img_15 from "./images/professionals_15.svg";
 
 function Professionals() {
   const [visibleItems, setVisibleItems] = useState([]);
