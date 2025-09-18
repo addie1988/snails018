@@ -111,7 +111,7 @@ function Game_3() {
 
                 {/* 指示器 */}
                 <div className="carousel-dots">
-                  {Game_mods.carouselData.images.map((_, index) => (
+                  {Game_mods.carouselData.images_3.map((_, index) => (
                     <button
                       key={index}
                       className={`carousel-dot ${

@@ -125,7 +125,7 @@ export default function Game_1() {
               ×
             </button>
             <video
-              src={'./public/images/game_2_content_video_1_1.mp4'}
+              src={'./src/images/game_2_content_video_1_1.mp4'}
               style={{ width: "100%", height: "auto" }}
               controls
               autoPlay

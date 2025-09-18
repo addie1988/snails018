@@ -23,17 +23,10 @@ const carouselData = {
     { src: game_3_content_video_5, alt: "game_3_content_video_5" },
   ],
   videos: [
-    "/images/game_1_content_video_1_1.mp4",
-    "/images/game_1_content_video_2_1.mp4",
-    "/images/game_1_content_video_3_1.mp4",
+    "./src/images/game_1_content_video_1_1.mp4",
+    "./src/images/game_1_content_video_2_1.mp4",
+    "./src/images/game_1_content_video_3_1.mp4",
   ],
-  videos_3: [
-    "/images/game_1_content_video_1_1.mp4",
-    "/images/game_1_content_video_2_1.mp4",
-    "/images/game_1_content_video_3_1.mp4",
-    "/images/game_2_content_video_1_1.mp4",
-    "/images/game_4_content_video_1_1.mp4",
-  ]
 };
 
 // 遊戲內容資料

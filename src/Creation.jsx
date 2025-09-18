@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import creation_1 from "../src/images/creation_1.webp";
-import creation from "../public/images/creation.mp4";
+import creation from "../src/images/creation.mp4";
 
 function Creation() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const handleIconClick = () => {
+  const handleClick = () => {
     setIsModalOpen(true);
   };
 
@@ -41,12 +41,13 @@ function Creation() {
                 "https://cdn-company.plarium.com/meet/production/media/assets/icons/play.svg"
               }
               alt="icon"
-              onClick={handleIconClick}
+              onClick={handleClick}
               style={{ cursor: "pointer" }}
             />
             <img
               src={creation_1}
               alt="creation_1"
+              onClick={handleClick}
               style={{ cursor: "pointer" }}
             />
           </div>
