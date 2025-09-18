@@ -411,7 +411,7 @@ a:hover {
 
 .banner .banner_content .banner_content_image .banner_content_image_content {
   margin: 0 auto;
-  mask: linear-gradient(to bottom, #000000 60%, transparent 100%);
+  mask: linear-gradient(to bottom, black 60%, transparent 100%);
   position: sticky;
   top: 0;
 }
@@ -2334,7 +2334,7 @@ a:hover {
 
 .game_1 .game_1_content .game_1_content_text .game_1_content_video .game_1_content_video_content .single-image-carousel .carousel-dots .carousel-dot.active {
   background: rgba(255, 255, 255, 0.9);
-  border-color: #ffffff;
+  border-color: white;
   transform: scale(1.2);
 }
 
@@ -2360,7 +2360,7 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000000;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2730,7 +2730,7 @@ a:hover {
 
 .game_2 .game_2_content .game_2_content_text .game_2_content_video .game_2_content_video_content .single-image-carousel .carousel-dots .carousel-dot.active {
   background: rgba(255, 255, 255, 0.9);
-  border-color: #ffffff;
+  border-color: white;
   transform: scale(1.2);
 }
 
@@ -2756,7 +2756,7 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000000;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3050,7 +3050,7 @@ a:hover {
 
 .game_3 .game_3_content .game_3_content_text .game_3_content_video .game_3_content_video_content .single-image-carousel .carousel-dots .carousel-dot.active {
   background: rgba(255, 255, 255, 0.9);
-  border-color: #ffffff;
+  border-color: white;
   transform: scale(1.2);
 }
 
@@ -3076,7 +3076,7 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000000;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3453,7 +3453,7 @@ a:hover {
 
 .game_4 .game_4_content .game_4_content_text .game_4_content_video .game_4_content_video_content .single-image-carousel .carousel-dots .carousel-dot.active {
   background: rgba(255, 255, 255, 0.9);
-  border-color: #ffffff;
+  border-color: white;
   transform: scale(1.2);
 }
 
@@ -3479,7 +3479,7 @@ a:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #000000;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4067,7 +4067,7 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #000000;
+  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4211,6 +4211,11 @@ a:hover {
   width: 20%;
   padding: 23px 18px;
   line-height: 2.6;
+}
+
+.support .support_content .main_menu .main_menu_content .main_menu_content_item_1 .min_menu_content_item_text .inner_menu .inner_menu_content,
+.support .support_content .main_menu .main_menu_content .main_menu_content_item_2 .min_menu_content_item_text .inner_menu .inner_menu_content,
+.support .support_content .main_menu .main_menu_content .main_menu_content_item_3 .min_menu_content_item_text .inner_menu .inner_menu_content {
   background: linear-gradient(116.71deg, rgba(167, 167, 167, 0.13), rgba(167, 167, 167, 0) 100.89%);
   border-radius: 20px;
   border: 2px solid #44464a;
@@ -4373,7 +4378,7 @@ a:hover {
 .support .support_content .main_menu .main_menu_content .main_menu_content_item_2 .min_menu_content_item_text .min_menu_content_item_text_area .min_menu_content_item_text_area_content .min_menu_content_item_text_area_content_item .min_menu_content_item_img .min_menu_content_item_img_content img,
 .support .support_content .main_menu .main_menu_content .main_menu_content_item_3 .min_menu_content_item_text .min_menu_content_item_text_area .min_menu_content_item_text_area_content .min_menu_content_item_text_area_content_item .min_menu_content_item_img .min_menu_content_item_img_content img {
   width: 100%;
-  height: 330px;
+  height: auto;
   object-fit: cover;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
@@ -4463,4 +4468,39 @@ a:hover {
 
 .social .social_content .social_content_ul .social_content_ul_content {
   margin: 0 auto;
+}
+
+.social .social_content .social_content_ul .social_content_ul_content ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.social .social_content .social_content_ul .social_content_ul_content ul li {
+  width: 40%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  border-radius: 30px;
+  background: #25282e;
+  box-shadow: 0 4px 64px #191b1f;
+  margin-bottom: 14px;
+  padding: 60px;
+}
+
+.social .social_content .social_content_ul .social_content_ul_content ul li .social_content_ul_content_text {
+  position: relative;
+}
+
+.social .social_content .social_content_ul .social_content_ul_content ul li .social_content_ul_content_img {
+  position: relative;
+}
+
+.social .social_content .social_content_ul .social_content_ul_content ul li .social_content_ul_content_img .social_content_ul_content_img_content {
+  margin: 0 auto;
+}
+
+.social .social_content .social_content_ul .social_content_ul_content ul li .social_content_ul_content_img .social_content_ul_content_img_content img {
+  width: 100%;
 }
