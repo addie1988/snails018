@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Game_mods from "./Game_mods";
-import game_2_content_video_1 from "./images/game_2_content_video_1.webp";
+import game_2_content_video_1 from "./images/game_2_content_video_1_1.mp4";
 
 export default function Game_1() {
   const [currentSlide, setCurrentSlide] = useState(0);

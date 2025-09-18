@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import Game_mods from "./Game_mods";
 import game_4_content_video_1 from "./images/game_4_content_video_1.webp";
+import game_4_content_video_1_1 from "./images/game_4_content_video_1_1.mp4";
+
 
 export default function Game_4() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -119,7 +121,7 @@ export default function Game_4() {
               ×
             </button>
             <video
-              src={'./src/images/game_4_content_video_1_1.mp4'}
+              src={game_4_content_video_1_1}
               style={{ width: "100%", height: "auto" }}
               controls
               autoPlay

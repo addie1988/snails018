@@ -7,6 +7,10 @@ import game_3_content_video_2 from "./images/game_3_content_video_2.webp";
 import game_3_content_video_3 from "./images/game_3_content_video_3.webp";
 import game_3_content_video_4 from "./images/game_3_content_video_4.webp";
 import game_3_content_video_5 from "./images/game_3_content_video_5.webp";
+import game_1_content_video_1_1 from './images/game_1_content_video_1_1.mp4'
+import game_1_content_video_2_1 from './images/game_1_content_video_2_1.mp4'
+import game_1_content_video_3_1 from './images/game_1_content_video_3_1.mp4'
+
 
 // 輪播圖片資料
 const carouselData = {
@@ -23,9 +27,9 @@ const carouselData = {
     { src: game_3_content_video_5, alt: "game_3_content_video_5" },
   ],
   videos: [
-    "./src/images/game_1_content_video_1_1.mp4",
-    "./src/images/game_1_content_video_2_1.mp4",
-    "./src/images/game_1_content_video_3_1.mp4",
+    game_1_content_video_1_1,
+    game_1_content_video_2_1,
+    game_1_content_video_3_1,
   ],
 };
 
