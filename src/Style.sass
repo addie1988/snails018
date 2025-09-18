@@ -9,10 +9,19 @@ $background: #191b1f
 // 響應式斷點
 $mobile: 768px
 $tablet: 1349px
+html
+    scroll-behavior: smooth
+    -webkit-overflow-scrolling: touch
+    will-change: scroll-position
+
 body
     background-color: #191b1f
     transition: padding-top 0.3s ease
     overflow-x: hidden
+    scroll-behavior: smooth
+    -webkit-overflow-scrolling: touch
+    will-change: scroll-position
+    transform: translateZ(0)
 
     // 當header固定時，為body添加padding-top
     &.header-fixed
@@ -3396,17 +3405,28 @@ a:hover
                 width: 100%
                 .audio_title_content
                     h1
+                        font-size: 40px
                         width: 100%
                     p
+                        font-size: 18px
                         width: 100%
             .audio_area
                 .audio_p
+                    .audio_p_content
+                        p
+                            font-size: 30px
                 .audio_input
                     .audio_input_content
                         flex-wrap: wrap
                         gap: 20px
                         .input-container
                             width: 100%
+                            input
+                                font-size: 22px
+                            img
+                                width: 10px
+                                height: 10px
+                                right: -30px
 
 // ============================================================================================= >>   
 
@@ -3637,6 +3657,7 @@ a:hover
                 .pallium_play_content_image_content
                     .pallium_play_content_image_area
                         width: 100%
+                        height: 340px
                         .pallium_play_content_image_area_content
                             max-height: 338px
                         .pallium_play_content_image_area_content_bottom
@@ -3908,9 +3929,12 @@ a:hover
             .main_menu
                 .main_menu_content
                     .menu_buttons
+                        flex-wrap: wrap
                         margin: 0
                         padding: 10px 0
                         .menu_button
+                            width: 90%
+                            margin: 0 auto
                     .main_menu_content_item_1,
                     .main_menu_content_item_2,
                     .main_menu_content_item_3
@@ -3945,6 +3969,8 @@ a:hover
 
 .social
     position: relative
+    will-change: scroll-position
+    transform: translateZ(0)
 
     .social_content
         margin: 0 auto
@@ -3952,33 +3978,94 @@ a:hover
         .social_content_title
             position: relative
 
+            .social_content_title_content
+                margin: 0 auto
+                text-align: center
+
+                h1
+                    font-size: 10em
+                    font-family: $fontfamily
+                    color: #fff
+
         .social_content_ul
             position: relative
+            padding-top: 100px
 
             .social_content_ul_content
                 margin: 0 auto
 
                 ul
+                    width: 100%
                     display: flex
-                    flex-wrap: wrap
-                    gap: 20px
+                    flex-wrap: nowrap
+                    justify-content: flex-start
+                    gap: 80px
+                    overflow-x: auto
+                    overflow-y: hidden
+                    padding: 20px 0
+                    scroll-behavior: smooth
+                    -webkit-overflow-scrolling: touch
+                    scroll-snap-type: x mandatory
+                    scroll-padding: 0 40px
+                    will-change: scroll-position
+                    transform: translateZ(0)
+
+                    // 隱藏滾動條但保持滾動功能
+                    scrollbar-width: none
+                    -ms-overflow-style: none
+
+                    &::-webkit-scrollbar
+                        display: none
 
                     li
-                        width: 40%
+                        width: 80%
+                        min-width: 600px
                         box-sizing: border-box
                         display: flex
                         flex-wrap: wrap
-                        position: relative;
-                        border-radius: 30px;
-                        background: #25282e;
-                        box-shadow: 0 4px 64px #191b1f;
-                        margin-bottom: 14px;
+                        position: relative
+                        border-radius: 30px
+                        background: #25282e
+                        box-shadow: 0 4px 64px #191b1f
+                        margin-bottom: 14px
                         padding: 60px
+                        flex-shrink: 0
+                        scroll-snap-align: start
+                        scroll-snap-stop: always
+                        will-change: transform
+                        transform: translateZ(0)
+                        backface-visibility: hidden
 
                         .social_content_ul_content_text
+                            width: 50%
                             position: relative
 
+                            .social_content_ul_content_text_content
+                                width: 100%
+                                height: 100%
+                                margin: 0 auto
+                                display: flex
+                                flex-wrap: wrap
+                                align-content: space-between
+
+                                h3
+                                    width: 90%
+                                    color: #fff
+                                    font-size: 3.5em
+                                    font-weight: 700
+                                    margin-bottom: 20px
+                                    text-align: left
+
+                                p
+                                    width: 90%
+                                    color: #fff
+                                    font-size: 2em
+                                    margin-bottom: 20px
+                                    text-align: left
+                                    line-height: 1.5
+
                         .social_content_ul_content_img
+                            width: 50%
                             position: relative
 
                             .social_content_ul_content_img_content
@@ -3986,6 +4073,97 @@ a:hover
 
                                 img
                                     width: 100%
+                                    background: linear-gradient(116.71deg, rgba(255, 255, 255, .07), rgba(255, 255, 255, 0) 100.89%)
+                                    -webkit-backdrop-filter: blur(15px)
+                                    backdrop-filter: blur(15px)
+                                    border-radius: 20px
+                                    border: 1px solid rgba(167, 167, 167, .4)
 
+                                p
+                                    font-size: 20px
+                                    color: #ffff
+                                    padding-top: 60px
+                                    line-height: 2
 
-                        
+// 影片彈窗樣式
+.video-modal-overlay
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(0, 0, 0, 0.8)
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 10000
+    backdrop-filter: blur(10px)
+    -webkit-backdrop-filter: blur(10px)
+    animation: fadeIn 0.3s ease-out
+
+    .video-modal-content
+        position: relative
+        max-width: 90%
+        max-height: 90%
+        background: #25282e
+        border-radius: 20px
+        padding: 20px
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5)
+        animation: scaleIn 0.3s ease-out
+
+        .video-modal-close
+            position: absolute
+            top: 40px
+            right: 40px
+            background: none
+            border: none
+            color: #fff
+            font-size: 60px
+            cursor: pointer
+            z-index: 10001
+            transition: color 0.3s ease
+
+            &:hover
+                color: $main
+
+        .video-modal-video
+            width: 100%
+            height: auto
+            max-height: 80vh
+            border-radius: 10px
+            outline: none
+
+@keyframes fadeIn
+    from
+        opacity: 0
+    to
+        opacity: 1
+
+@keyframes scaleIn
+    from
+        transform: scale(0.8)
+        opacity: 0
+    to
+        transform: scale(1)
+        opacity: 1
+
+@media screen and (max-width: 940px)
+    .social
+        .social_content
+            .social_content_title
+                .social_content_title_content
+                    h1
+                        font-size: 4em
+            .social_content_ul
+                .social_content_ul_content
+                    ul
+                        flex-wrap: wrap
+                        justify-content: center
+                        gap: 20px
+                        li
+                            width: 90%
+                            max-width: 100%
+                            .social_content_ul_content_text
+                                .social_content_ul_content_text_content
+                                    h3
+                                        p
