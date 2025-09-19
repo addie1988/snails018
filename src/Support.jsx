@@ -14,6 +14,7 @@ import min_menu_content_item_img_11 from "./images/min_menu_content_item_img_11.
 import min_menu_content_item_img_12 from "./images/min_menu_content_item_img_12.webp";
 import min_menu_content_item_img_13 from "./images/min_menu_content_item_img_13.webp";
 import support from "./images/support.mp4";
+import Video_modularity from "./Video_modularity";
 
 
 function Support() {
@@ -129,29 +130,11 @@ function Support() {
 
   return (
     <div className="support">
-      {showModal && (
-        <div className="modal" onClick={() => setShowModal(false)}>
-          <div className="modal-content">
-            <button 
-              onClick={() => setShowModal(false)}
-              style={{
-                position: 'absolute',
-                top: '20px',
-                right: '20px',
-                background: 'transparent',
-                border: 'none',
-                color: '#fff',
-                fontSize: '24px',
-                cursor: 'pointer',
-                zIndex: 1001
-              }}
-            >
-              ✕
-            </button>
-            <video src={support} alt="Modal" controls autoPlay />
-          </div>
-        </div>
-      )}
+      <Video_modularity 
+        isOpen={showModal}
+        onClose={() => setShowModal(false)}
+        videoSrc={'./src/images/support.mp4'}
+      />
       <div className="support_content">
         <div className="main_menu">
           <div className="main_menu_content">

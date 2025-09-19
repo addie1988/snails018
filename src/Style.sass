@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bitcount+Prop+Single:wght@100..900&family=Cal+Sans&family=Galada&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Oi&family=Six+Caps&family=Spicy+Rice&family=UnifrakturCook:wght@700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bitcount+Prop+Single:wght@100..900&family=Cal+Sans&family=Galada&family=Noto+Sans+TC:wght@100..900&family=Noto+Serif+TC:wght@200..900&family=Oi&family=Passion+One:wght@400;700;900&family=Press+Start+2P&family=Rowdies:wght@300;400;700&family=Six+Caps&family=Spicy+Rice&family=UnifrakturCook:wght@700&display=swap');
+@import './Video_modal.sass'
 
 $backgroundimage: linear-gradient(127.14deg, #f24618, #f28118 75.83%, #f24618)
-$fontfamily: "UnifrakturCook", cursive
+$fontfamily: "Passion One", sans-serif;
 $mask: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%)
 $main: #f24618
 $background: #191b1f
@@ -17,7 +18,6 @@ html
 body
     background-color: #191b1f
     transition: padding-top 0.3s ease
-    overflow-x: hidden
     scroll-behavior: smooth
     -webkit-overflow-scrolling: touch
     will-change: scroll-position
@@ -2155,88 +2155,6 @@ a:hover
                         line-height: 1.4
                         padding-top: 80px
 
-// 彈窗樣式
-.video-modal-overlay
-    position: fixed
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    background-color: rgba(0, 0, 0,1)
-    display: flex
-    justify-content: center
-    align-items: center
-    z-index: 1000
-    animation: fadeIn 0.3s ease
-
-.video-modal-content
-    position: relative
-    width: 60%
-    background: #000
-    border-radius: 10px
-    overflow: hidden
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5)
-    animation: slideIn 0.3s ease
-
-.video-modal-close
-    position: absolute
-    top: 10px
-    right: 15px
-    background: rgba(255, 255, 255, 0.2)
-    border: none
-    color: white
-    font-size: 30px
-    font-weight: bold
-    cursor: pointer
-    width: 40px
-    height: 40px
-    border-radius: 50%
-    display: flex
-    justify-content: center
-    align-items: center
-    z-index: 1001
-    transition: background-color 0.3s ease
-
-    &:hover
-        background: rgba(255, 255, 255, 0.3)
-
-.video-modal-iframe-container
-    width: 100%
-    height: 100%
-    position: relative
-    padding-bottom: 56.25% // 16:9 比例
-    overflow: hidden
-
-.video-modal-iframe
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    border: none
-    border-radius: 10px
-
-.video-modal-video
-    width: 100%
-    height: auto
-    max-height: 80vh
-    object-fit: contain
-    border-radius: 10px
-
-@keyframes fadeIn
-    from
-        opacity: 0
-    to
-        opacity: 1
-
-@keyframes slideIn
-    from
-        transform: scale(0.8) translateY(-50px)
-        opacity: 0
-    to
-        transform: scale(1) translateY(0)
-        opacity: 1
-
 @media screen and (max-width: 1500px)
     .game_1
         .game_1_content
@@ -2510,88 +2428,6 @@ a:hover
                         line-height: 1.4
                         padding-top: 80px
 
-// 彈窗樣式
-.video-modal-overlay
-    position: fixed
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    background-color: rgba(0, 0, 0,1)
-    display: flex
-    justify-content: center
-    align-items: center
-    z-index: 1000
-    animation: fadeIn 0.3s ease
-
-.video-modal-content
-    position: relative
-    width: 60%
-    background: #000
-    border-radius: 10px
-    overflow: hidden
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5)
-    animation: slideIn 0.3s ease
-
-.video-modal-close
-    position: absolute
-    top: 10px
-    right: 15px
-    background: rgba(255, 255, 255, 0.2)
-    border: none
-    color: white
-    font-size: 30px
-    font-weight: bold
-    cursor: pointer
-    width: 40px
-    height: 40px
-    border-radius: 50%
-    display: flex
-    justify-content: center
-    align-items: center
-    z-index: 1001
-    transition: background-color 0.3s ease
-
-    &:hover
-        background: rgba(255, 255, 255, 0.3)
-
-.video-modal-iframe-container
-    width: 100%
-    height: 100%
-    position: relative
-    padding-bottom: 56.25% // 16:9 比例
-    overflow: hidden
-
-.video-modal-iframe
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    border: none
-    border-radius: 10px
-
-.video-modal-video
-    width: 100%
-    height: auto
-    max-height: 80vh
-    object-fit: contain
-    border-radius: 10px
-
-@keyframes fadeIn
-    from
-        opacity: 0
-    to
-        opacity: 1
-
-@keyframes slideIn
-    from
-        transform: scale(0.8) translateY(-50px)
-        opacity: 0
-    to
-        transform: scale(1) translateY(0)
-        opacity: 1
-
 @media screen and (max-width: 1060px)
     .game_2
         padding-top: 40px
@@ -2790,88 +2626,6 @@ a:hover
                         font-size: 1.5em
                         line-height: 1.4
                         padding-top: 80px
-
-// 彈窗樣式
-.video-modal-overlay
-    position: fixed
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    background-color: rgba(0, 0, 0,1)
-    display: flex
-    justify-content: center
-    align-items: center
-    z-index: 1000
-    animation: fadeIn 0.3s ease
-
-.video-modal-content
-    position: relative
-    width: 60%
-    background: #000
-    border-radius: 10px
-    overflow: hidden
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5)
-    animation: slideIn 0.3s ease
-
-.video-modal-close
-    position: absolute
-    top: 10px
-    right: 15px
-    background: rgba(255, 255, 255, 0.2)
-    border: none
-    color: white
-    font-size: 30px
-    font-weight: bold
-    cursor: pointer
-    width: 40px
-    height: 40px
-    border-radius: 50%
-    display: flex
-    justify-content: center
-    align-items: center
-    z-index: 1001
-    transition: background-color 0.3s ease
-
-    &:hover
-        background: rgba(255, 255, 255, 0.3)
-
-.video-modal-iframe-container
-    width: 100%
-    height: 100%
-    position: relative
-    padding-bottom: 56.25% // 16:9 比例
-    overflow: hidden
-
-.video-modal-iframe
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    border: none
-    border-radius: 10px
-
-.video-modal-video
-    width: 100%
-    height: auto
-    max-height: 80vh
-    object-fit: contain
-    border-radius: 10px
-
-@keyframes fadeIn
-    from
-        opacity: 0
-    to
-        opacity: 1
-
-@keyframes slideIn
-    from
-        transform: scale(0.8) translateY(-50px)
-        opacity: 0
-    to
-        transform: scale(1) translateY(0)
-        opacity: 1
 
 @media screen and (max-width: 1500px)
     .game_3
@@ -3145,88 +2899,6 @@ a:hover
                         font-size: 1.5em
                         line-height: 1.4
                         padding-top: 80px
-
-// 彈窗樣式
-.video-modal-overlay
-    position: fixed
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    background-color: rgba(0, 0, 0,1)
-    display: flex
-    justify-content: center
-    align-items: center
-    z-index: 1000
-    animation: fadeIn 0.3s ease
-
-.video-modal-content
-    position: relative
-    width: 60%
-    background: #000
-    border-radius: 10px
-    overflow: hidden
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5)
-    animation: slideIn 0.3s ease
-
-.video-modal-close
-    position: absolute
-    top: 10px
-    right: 15px
-    background: rgba(255, 255, 255, 0.2)
-    border: none
-    color: white
-    font-size: 30px
-    font-weight: bold
-    cursor: pointer
-    width: 40px
-    height: 40px
-    border-radius: 50%
-    display: flex
-    justify-content: center
-    align-items: center
-    z-index: 1001
-    transition: background-color 0.3s ease
-
-    &:hover
-        background: rgba(255, 255, 255, 0.3)
-
-.video-modal-iframe-container
-    width: 100%
-    height: 100%
-    position: relative
-    padding-bottom: 56.25% // 16:9 比例
-    overflow: hidden
-
-.video-modal-iframe
-    position: absolute
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    border: none
-    border-radius: 10px
-
-.video-modal-video
-    width: 100%
-    height: auto
-    max-height: 80vh
-    object-fit: contain
-    border-radius: 10px
-
-@keyframes fadeIn
-    from
-        opacity: 0
-    to
-        opacity: 1
-
-@keyframes slideIn
-    from
-        transform: scale(0.8) translateY(-50px)
-        opacity: 0
-    to
-        transform: scale(1) translateY(0)
-        opacity: 1
 
 @media screen and (max-width: 1060px)
     .game_4
@@ -3676,33 +3348,6 @@ a:hover
     padding: 100px 0
     background-color: $background
 
-    .modal
-        position: fixed
-        top: 0
-        left: 0
-        right: 0
-        bottom: 0
-        background-color: rgba(0, 0, 0, 1)
-        display: flex
-        justify-content: center
-        align-items: center
-        z-index: 1000
-
-        .modal-content
-            margin: 0 auto
-            display: flex
-            justify-content: center
-            align-items: center
-            width: 100%
-            height: 100%
-
-            video
-                width: 60%
-                height: auto
-                object-fit: cover
-                border-radius: 10px
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3)
-
     .support_content
         width: 1637px
         margin: 0 auto
@@ -3919,10 +3564,6 @@ a:hover
 
 @media screen and (max-width: 1688px)
     .support
-        .modal
-            .modal-content
-                video
-                    width: 90%
         .support_content
             width: 100%
             padding: 0
@@ -3955,6 +3596,7 @@ a:hover
                                             width: 90%
                                             padding: 0
                                             h3
+                                                font-size: 30px
                                             ul
                                                 line-height: 2
                                         .min_menu_content_item_img
@@ -3965,12 +3607,11 @@ a:hover
                                                     width: 100%
                                                     height: auto
 
-    // ============================================================================================= >>    
+// ============================================================================================= >>    
 
 .social
     position: relative
     will-change: scroll-position
-    transform: translateZ(0)
 
     .social_content
         margin: 0 auto
@@ -3993,6 +3634,8 @@ a:hover
 
             .social_content_ul_content
                 margin: 0 auto
+                width: 100%
+                overflow: hidden
 
                 ul
                     width: 100%
@@ -4000,8 +3643,6 @@ a:hover
                     flex-wrap: nowrap
                     justify-content: flex-start
                     gap: 80px
-                    overflow-x: auto
-                    overflow-y: hidden
                     padding: 20px 0
                     scroll-behavior: smooth
                     -webkit-overflow-scrolling: touch
@@ -4009,17 +3650,26 @@ a:hover
                     scroll-padding: 0 40px
                     will-change: scroll-position
                     transform: translateZ(0)
+                    overflow-x: auto
+                    overflow-y: hidden
 
                     // 隱藏滾動條但保持滾動功能
                     scrollbar-width: none
                     -ms-overflow-style: none
 
+                    // 優化滾動性能
+                    -webkit-transform: translateZ(0)
+                    transform: translateZ(0)
+                    backface-visibility: hidden
+                    perspective: 1000px
+
                     &::-webkit-scrollbar
                         display: none
 
                     li
-                        width: 80%
+                        width: 100%
                         min-width: 600px
+                        max-width: 1000px
                         box-sizing: border-box
                         display: flex
                         flex-wrap: wrap
@@ -4070,6 +3720,20 @@ a:hover
 
                             .social_content_ul_content_img_content
                                 margin: 0 auto
+                                position: relative
+
+                                .carousel-main-image-icon
+                                    position: absolute
+                                    top: 50%
+                                    left: 50%
+                                    transform: translate(-50%, -50%)
+                                    width: 30px
+                                    height: 30px
+                                    padding: 20px
+                                    background-color: #f24618
+                                    border-radius: 50%
+                                    z-index: 1
+                                    box-shadow: 0 4px 15px rgba(242, 70, 24, 0.4)
 
                                 img
                                     width: 100%
@@ -4079,73 +3743,63 @@ a:hover
                                     border-radius: 20px
                                     border: 1px solid rgba(167, 167, 167, .4)
 
-                                p
-                                    font-size: 20px
-                                    color: #ffff
-                                    padding-top: 60px
-                                    line-height: 2
+                            .social_content_ul_content_p
+                                width: 100%
+                                position: relative
 
-// 影片彈窗樣式
-.video-modal-overlay
+                                .social_content_ul_content_p_content
+                                    margin: 0 auto
+
+                                    p
+                                        font-size: 20px
+                                        color: #ffff
+                                        padding-top: 60px
+                                        line-height: 2
+
+// 返回頂部按鈕樣式
+.scroll-to-top-btn
     position: fixed
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
-    background-color: rgba(0, 0, 0, 0.8)
+    bottom: 30px
+    right: 30px
+    width: 50px
+    height: 50px
+    background: linear-gradient(127.14deg, #f24618, #f28118 75.83%, #f24618)
+    border-radius: 50%
     display: flex
-    justify-content: center
     align-items: center
-    z-index: 10000
+    justify-content: center
+    cursor: pointer
+    z-index: 1000
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+    box-shadow: 0 4px 20px rgba(242, 70, 24, 0.3)
+    border: 2px solid rgba(255, 255, 255, 0.2)
     backdrop-filter: blur(10px)
     -webkit-backdrop-filter: blur(10px)
-    animation: fadeIn 0.3s ease-out
 
-    .video-modal-content
-        position: relative
-        max-width: 90%
-        max-height: 90%
-        background: #25282e
-        border-radius: 20px
-        padding: 20px
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5)
-        animation: scaleIn 0.3s ease-out
+    svg
+        color: #fff
+        transition: transform 0.3s ease
 
-        .video-modal-close
-            position: absolute
-            top: 40px
-            right: 40px
-            background: none
-            border: none
-            color: #fff
-            font-size: 60px
-            cursor: pointer
-            z-index: 10001
-            transition: color 0.3s ease
+    &:hover
+        transform: translateY(-3px) scale(1.05)
+        box-shadow: 0 8px 30px rgba(242, 70, 24, 0.5)
 
-            &:hover
-                color: $main
+        svg
+            transform: translateY(-2px)
 
-        .video-modal-video
-            width: 100%
-            height: auto
-            max-height: 80vh
-            border-radius: 10px
-            outline: none
+    &:active
+        transform: translateY(-1px) scale(1.02)
 
-@keyframes fadeIn
-    from
-        opacity: 0
-    to
-        opacity: 1
+    // 響應式設計
+    @media screen and (max-width: 768px)
+        bottom: 20px
+        right: 20px
+        width: 45px
+        height: 45px
 
-@keyframes scaleIn
-    from
-        transform: scale(0.8)
-        opacity: 0
-    to
-        transform: scale(1)
-        opacity: 1
+        svg
+            width: 20px
+            height: 20px
 
 @media screen and (max-width: 940px)
     .social
@@ -4153,17 +3807,157 @@ a:hover
             .social_content_title
                 .social_content_title_content
                     h1
-                        font-size: 4em
+                        font-size: 38px
             .social_content_ul
                 .social_content_ul_content
+                    width: 90%
                     ul
                         flex-wrap: wrap
                         justify-content: center
-                        gap: 20px
+                        gap: 10px
                         li
                             width: 90%
+                            padding: 30px 0
                             max-width: 100%
+                            min-width: 100%
+                            border-radius: 10px
                             .social_content_ul_content_text
+                                width: 90%
+                                margin: 0 auto
                                 .social_content_ul_content_text_content
+                                    margin: 0 auto
                                     h3
-                                        p
+                                        font-size: 24px
+
+                                    p
+                                        font-size: 18px
+                            .social_content_ul_content_img
+                                width: 90%
+                                margin: 0 auto
+                                .social_content_ul_content_img_content
+                                    .carousel-main-image-icon
+                                        width: 16px
+                                        height: 16px
+                                        padding: 10px
+                                        background-color: #f24618
+                                        border-radius: 50%
+                                        z-index: 1
+                                        box-shadow: 0 4px 15px rgba(242, 70, 24, 0.4)
+                                    img
+                                        width: 100%
+                                        border-radius: 5px
+                                    p
+                                        padding-top: 20px
+
+// ============================================================================================= >>    
+
+.image_film
+    position: relative
+    overflow: hidden
+    padding: 100px 0
+
+    .image_film_content
+        margin: 0 auto
+        position: relative
+
+        .image_film_slider
+            width: 100%
+            overflow: visible
+            position: relative
+
+            .image_film_track
+                display: flex
+                width: 100%
+                gap: 30px
+                will-change: transform
+                transform: translateZ(0)
+                animation: scroll 20s linear infinite
+
+                .image_film_slide
+                    width: 30%
+                    flex-shrink: 0
+                    padding: 10px
+                    position: relative
+                    background: linear-gradient(116.71deg, rgba(255, 255, 255, .07), rgba(255, 255, 255, 0) 100.89%)
+                    -webkit-backdrop-filter: blur(15px)
+                    backdrop-filter: blur(15px)
+                    border-radius: 20px
+                    border: 1px solid rgba(167, 167, 167, .4)
+                    position: relative
+
+                    .image_film_slide_content
+                        position: relative
+                        width: 100%
+                        height: 100%
+
+                        .product_overlay
+                            position: absolute
+                            top: 0
+                            left: 0
+                            right: 0
+                            bottom: 0
+                            background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3))
+                            display: flex
+                            flex-direction: column
+                            justify-content: center
+                            align-items: center
+                            opacity: 1
+                            transition: all 0.3s ease
+                            z-index: 5
+
+                            .carousel-main-image-icon
+                                position: absolute
+                                top: 50%
+                                left: 50%
+                                transform: translate(-50%, -50%)
+                                width: 30px
+                                height: 30px
+                                padding: 20px
+                                background-color: $main
+                                border-radius: 50%
+                                z-index: 1
+                                box-shadow: 0 4px 15px rgba(242, 70, 24, 0.4)
+
+                                &:hover
+                                    background-color: darken($main, 10%)
+                                    box-shadow: 0 6px 20px rgba(242, 70, 24, 0.6)
+
+                            .product_name
+                                color: #fff
+                                font-size: 1.5em
+                                font-weight: bold
+                                margin-bottom: 8px
+                                text-align: center
+
+                            .product_description
+                                color: #fff
+                                font-size: 1em
+                                text-align: center
+                                opacity: 0.9
+
+                        &:hover .product_overlay
+                            opacity: 1
+
+                        img
+                            width: 100%
+                            height: auto
+                            display: block
+                            transition: transform 0.3s ease
+
+                            &:hover
+                                transform: scale(1.05)
+
+// 滾動動畫
+@keyframes scroll
+    0%
+        transform: translateX(0)
+    100%
+        transform: translateX(-50%)
+
+@media screen and (max-width: 900px)
+    .image_film
+        .image_film_content
+            .image_film_slider
+                .image_film_track
+                    .image_film_slide
+                        width: 80%

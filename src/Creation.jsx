@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import creation_1 from "../src/images/creation_1.webp";
 import creation from "../src/images/creation.mp4";
+import Video_modularity from "./Video_modularity";
 
 function Creation() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -55,24 +56,11 @@ function Creation() {
       </div>
 
       {/* 彈出視窗 */}
-      {isModalOpen && (
-        <div className="video-modal-overlay" onClick={closeModal}>
-          <div
-            className="video-modal-content"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button className="video-modal-close" onClick={closeModal}>
-              ×
-            </button>
-            <video
-              src={creation}
-              controls
-              autoPlay
-              className="video-modal-video"
-            ></video>
-          </div>
-        </div>
-      )}
+      <Video_modularity 
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        videoSrc={'./src/images/creation.mp4'}
+      />
     </div>
   );
 }

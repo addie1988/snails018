@@ -19,6 +19,7 @@ import Pallium_play from './Pallium_play'
 import Benefits from './Benefits'
 import Support from './Support'
 import Social from './Social'
+import Image_film from './Image_film'
 
 function App() {
   return (
@@ -42,6 +43,7 @@ function App() {
       <Benefits />
       <Support />
       <Social />
+      <Image_film />
     </>
   )
 }

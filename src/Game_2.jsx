@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Game_mods from "./Game_mods";
-import game_2_content_video_1 from "./images/game_2_content_video_1_1.mp4";
+import game_2_content_video_1 from "./images/game_2_content_video_1.webp";
+import Video_modularity from "./Video_modularity";
 
 export default function Game_1() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -114,29 +115,12 @@ export default function Game_1() {
         </div>
       </div>
 
-      {/* 彈窗組件 */}
-      {isModalOpen && (
-        <div className="video-modal-overlay" onClick={closeModal}>
-          <div
-            className="video-modal-content"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button className="video-modal-close" onClick={closeModal}>
-              ×
-            </button>
-            <video
-              src={'./src/images/game_2_content_video_1_1.mp4'}
-              style={{ width: "100%", height: "auto" }}
-              controls
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="video-modal-video"
-            />
-          </div>
-        </div>
-      )}
+      {/* 影片彈跳視窗元件 */}
+      <Video_modularity 
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        videoSrc={'./src/images/game_2_content_video_1_1.mp4'}
+      />
     </div>
   );
 }

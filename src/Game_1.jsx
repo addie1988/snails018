@@ -1,21 +1,12 @@
 import { useState, useEffect } from "react";
 import Game_mods from "./Game_mods";
+import Video_modularity from "./Video_modularity";
 
 export default function Game_1() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState("");
-
-  const handleImageClick = (index) => {
-    setSelectedVideo(Game_mods.carouselData.videos[index]);
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedVideo("");
-  };
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % Game_mods.carouselData.images.length);
@@ -30,6 +21,18 @@ export default function Game_1() {
 
   const goToSlide = (index) => {
     setCurrentSlide(index);
+  };
+
+  // 處理影片彈跳視窗
+  const handleImageClick = (index) => {
+    setSelectedVideo(Game_mods.carouselData.images[index].video);
+    setIsModalOpen(true);
+  };
+
+  // 關閉彈跳視窗
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedVideo("");
   };
 
   useEffect(() => {
@@ -88,7 +91,7 @@ export default function Game_1() {
                 <img 
                   className="carousel-main-image-icon" 
                   src={'https://cdn-company.plarium.com/meet/production/media/assets/icons/play.svg'} 
-                  alt="icon"
+                  alt="播放按鈕"
                   onClick={() => handleImageClick(currentSlide)}
                   style={{ cursor: "pointer" }}
                 />
@@ -141,29 +144,12 @@ export default function Game_1() {
         </div>
       </div>
 
-      {/* 彈窗組件 */}
-      {isModalOpen && (
-        <div className="video-modal-overlay" onClick={closeModal}>
-          <div
-            className="video-modal-content"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button className="video-modal-close" onClick={closeModal}>
-              ×
-            </button>
-            <video
-              src={selectedVideo}
-              style={{ width: "100%", height: "auto" }}
-              controls
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="video-modal-video"
-            />
-          </div>
-        </div>
-      )}
+      {/* 影片彈跳視窗元件 */}
+      <Video_modularity 
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        videoSrc={'./src/images/game_1_content_video_1_1.mp4'}
+      />
     </div>
   );
 }
