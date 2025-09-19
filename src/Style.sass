@@ -4090,3 +4090,190 @@ a:hover
                     border-radius: 5px
                     background-color: $main
                     text-decoration: none
+
+@media screen and (max-width: 650px)
+    .rewards
+        .rewards_content
+            width: 80%
+            border-radius: 14px
+            .rewards_content_button
+                .rewards_content_button_content
+                    a
+// ============================================================================================= >>               
+
+.community
+    position: relative
+
+    .community_content
+        margin: 0 auto
+
+        .community_content_title
+            position: relative
+            padding: 100px 0
+
+            .community_content_title_content
+                margin: 0 auto
+
+                h1
+                    font-size: 6em
+                    font-family: $fontfamily
+                    color: #fff
+                    text-align: center
+
+        .community_content_ul
+            position: relative
+            padding-top: 100px
+
+            .community_content_ul_content
+                margin: 0 auto
+
+                ul
+                    width: 100%
+                    display: flex
+                    flex-wrap: wrap
+                    justify-content: center
+                    gap: 20px
+
+                    li
+                        width: 10%
+                        height: 400px
+                        padding: 20px
+                        border-radius: 10px
+                        position: relative
+                        background: linear-gradient(180deg, rgba(255, 255, 255, .07) 9.44%, rgba(255, 255, 255, 0) 92.47%)
+                        border-radius: 20px
+                        border: 1px solid #3e3f43
+                        display: flex
+                        justify-content: space-around
+                        flex-direction: column
+                        align-items: center
+                        gap: 20px
+                        transition: all 0.3s ease
+                        cursor: pointer
+
+                        .community_content_ul_content_img
+                            position: relative
+
+                            .community_content_ul_content_img_content
+                                margin: 0 auto
+                                display: flex
+                                justify-content: center
+                                align-items: center
+
+                                img
+                                    width: 40px
+                                    height: 40px
+                                    padding: 20px
+                                    border-radius: 50%
+
+                        .community_content_ul_content_text
+                            position: relative
+                            top: 20px
+                            left: 6px
+                            text-align: top
+                            font-size: 30px
+                            font-weight: 600
+                            color: #fff
+
+                            .community_content_ul_content_text_content
+                                margin: 0 auto
+                                display: flex
+                                justify-content: center
+                                align-items: center
+                                p
+                                    font-size: 30px
+                                    font-weight: 600
+                                    color: #fff
+                                    writing-mode: vertical-rl
+
+                        &:nth-child(1)
+                            .community_content_ul_content_img
+                                .community_content_ul_content_img_content
+                                    img
+                                        background: radial-gradient(45.87% 45.87% at 31.41% 80.99%, #fed475 0, rgba(254, 215, 121, 0) 100%), radial-gradient(26.03% 26.03% at 73.56% 74.79%, #d82f7e 0, rgba(216, 47, 126, 0) 100%), radial-gradient(74.38% 74.38% at 33.89% -3.31%, #4c60d3 0, rgba(76, 96, 211, 0) 100%), #df3568
+                                        box-shadow: inset 0 0 2px 0 hsla(0, 0%, 100%, .5), 0 4px 14px 0 rgba(216, 52, 116, .6)
+
+                        &:nth-child(2)
+                            .community_content_ul_content_img
+                                .community_content_ul_content_img_content
+                                    img
+                                        background: #fe0000
+                                        box-shadow: inset 0 0 2px 0 hsla(0, 0%, 100%, .5), 0 4px 14px 0 rgba(216, 52, 116, .6)
+
+                        &:nth-child(3)
+                            .community_content_ul_content_img
+                                .community_content_ul_content_img_content
+                                    img
+                                        background: #0a66c2
+                                        box-shadow: inset 0 0 2px 0 hsla(0, 0%, 100%, .5), 0 4px 14px 0 rgba(216, 52, 116, .6)
+
+                        &:nth-child(4)
+                            .community_content_ul_content_img
+                                .community_content_ul_content_img_content
+                                    img
+                                        background: #13aff0
+                                        box-shadow: inset 0 0 2px 0 hsla(0, 0%, 100%, .5), 0 4px 14px 0 rgba(216, 52, 116, .6)
+
+                        &:hover
+                            transform: translateY(-40px)
+
+@media screen and (max-width: 780px)
+    .community
+        .community_content
+            .community_content_title
+                .community_content_title_content
+                    h1
+                        font-size: 38px
+            .community_content_ul
+                padding-top: 30px
+                .community_content_ul_content
+                    ul
+                        li
+                            width: 30%
+                            height: auto
+                            background: none
+                            border: none
+                            padding: 0
+                            display: inline-block
+                            justify-content: flex-start
+                            .community_content_ul_content_img
+                            .community_content_ul_content_text
+                                display: none
+
+// ============================================================================================= >>    
+
+.footer
+    position: relative
+
+    .footer_content
+        margin: 0 auto
+
+        ul
+            display: flex
+            flex-wrap: wrap
+            justify-content: center
+            gap: 20px
+
+            li
+                width: 24%
+                padding: 20px
+                text-align: center
+
+                p
+                    color: #fff
+                    font-size: 13px
+                    font-weight: 600
+
+@media screen and (max-width: 580px)
+    .footer
+        .footer_content
+            ul
+                display: block
+                li
+                    width: 90%
+                    p
+                        text-align: center
+                    &:nth-child(1)
+                        display: none
+                    &:nth-child(3)
+                        display: none

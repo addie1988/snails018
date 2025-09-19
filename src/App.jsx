@@ -21,6 +21,8 @@ import Support from './Support'
 import Social from './Social'
 import Image_film from './Image_film'
 import Rewards from './Rewards'
+import Community from './Community'
+import Footer from './Footer'
 
 function App() {
   return (
@@ -46,6 +48,8 @@ function App() {
       <Social />
       <Image_film />
       <Rewards />
+      <Community />
+      <Footer />
     </>
   )
 }

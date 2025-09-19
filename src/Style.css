@@ -569,7 +569,7 @@ a:hover {
 
 .banner .banner_content .banner_content_image .banner_content_image_content {
   margin: 0 auto;
-  mask: linear-gradient(to bottom, black 60%, transparent 100%);
+  mask: linear-gradient(to bottom, #000000 60%, transparent 100%);
   position: sticky;
   top: 0;
 }
@@ -2492,7 +2492,7 @@ a:hover {
 
 .game_1 .game_1_content .game_1_content_text .game_1_content_video .game_1_content_video_content .single-image-carousel .carousel-dots .carousel-dot.active {
   background: rgba(255, 255, 255, 0.9);
-  border-color: white;
+  border-color: #ffffff;
   transform: scale(1.2);
 }
 
@@ -2794,7 +2794,7 @@ a:hover {
 
 .game_2 .game_2_content .game_2_content_text .game_2_content_video .game_2_content_video_content .single-image-carousel .carousel-dots .carousel-dot.active {
   background: rgba(255, 255, 255, 0.9);
-  border-color: white;
+  border-color: #ffffff;
   transform: scale(1.2);
 }
 
@@ -3020,7 +3020,7 @@ a:hover {
 
 .game_3 .game_3_content .game_3_content_text .game_3_content_video .game_3_content_video_content .single-image-carousel .carousel-dots .carousel-dot.active {
   background: rgba(255, 255, 255, 0.9);
-  border-color: white;
+  border-color: #ffffff;
   transform: scale(1.2);
 }
 
@@ -3329,7 +3329,7 @@ a:hover {
 
 .game_4 .game_4_content .game_4_content_text .game_4_content_video .game_4_content_video_content .single-image-carousel .carousel-dots .carousel-dot.active {
   background: rgba(255, 255, 255, 0.9);
-  border-color: white;
+  border-color: #ffffff;
   transform: scale(1.2);
 }
 
@@ -4774,4 +4774,60 @@ a:hover {
   border-radius: 5px;
   background-color: #f24618;
   text-decoration: none;
+}
+
+.community {
+  position: relative;
+}
+
+.community .community_content {
+  margin: 0 auto;
+}
+
+.community .community_content .community_content_title {
+  position: relative;
+}
+
+.community .community_content .community_content_title .community_content_title_content {
+  margin: 0 auto;
+}
+
+.community .community_content .community_content_ul {
+  position: relative;
+}
+
+.community .community_content .community_content_ul .community_content_ul_content {
+  margin: 0 auto;
+}
+
+.community .community_content .community_content_ul .community_content_ul_content ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.community .community_content .community_content_ul .community_content_ul_content ul li {
+  width: 30%;
+  max-width: 300px;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.community .community_content .community_content_ul .community_content_ul_content ul li img {
+  width: 30%;
+  object-fit: cover;
+}
+
+.community .community_content .community_content_ul .community_content_ul_content ul li p {
+  position: absolute;
+  top: 140px;
+  left: 50px;
+  text-align: center;
+  font-size: 30px;
+  writing-mode: vertical-rl;
+  font-weight: 600;
+  color: #fff;
 }
