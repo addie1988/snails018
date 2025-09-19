@@ -4,6 +4,7 @@ import office_2 from "../src/images/office_2.webp";
 import office_3 from "../src/images/office_3.webp";
 import office_4 from "../src/images/office_4.webp";
 import office_5 from "../src/images/office_5.webp";
+import useScrollLock from "./useScrollLock";
 
 function Office() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,6 +29,9 @@ function Office() {
       images: [office_4, office_5, office_1, office_2, office_3]
     }
   ];
+
+  // 使用統一的滾動鎖定 Hook
+  useScrollLock(isModalOpen);
 
   const openModal = (officeIndex) => {
     setCurrentOffice(officeIndex);

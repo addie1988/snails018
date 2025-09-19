@@ -3,6 +3,7 @@ import Game_mods from "./Game_mods";
 import game_4_content_video_1 from "./images/game_4_content_video_1.webp";
 import game_4_content_video_1_1 from "./images/game_4_content_video_1_1.mp4";
 import Video_modularity from "./Video_modularity";
+import useScrollLock from "./useScrollLock";
 
 
 export default function Game_4() {
@@ -10,6 +11,9 @@ export default function Game_4() {
   const [isAutoPlay, setIsAutoPlay] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState("");
+
+  // 使用統一的滾動鎖定 Hook
+  useScrollLock(isModalOpen);
 
   const handleImageClick = (index) => {
     setSelectedVideo(Game_mods.carouselData.videos[index]);

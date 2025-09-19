@@ -128,6 +128,8 @@ export default function Social() {
                       className="carousel-main-image-icon"
                       src="https://cdn-company.plarium.com/meet/production/media/assets/icons/play.svg"
                       alt="播放按鈕"
+                      onClick={handleImageClick1}
+                      style={{ cursor: "pointer" }}
                     />
                     <img
                       src={social_1}
@@ -167,6 +169,8 @@ export default function Social() {
                       className="carousel-main-image-icon"
                       src="https://cdn-company.plarium.com/meet/production/media/assets/icons/play.svg"
                       alt="播放按鈕"
+                      onClick={handleImageClick2}
+                      style={{ cursor: "pointer" }}
                     />
                     <img
                       src={social_2}

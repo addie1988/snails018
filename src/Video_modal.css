@@ -21,11 +21,14 @@
 }
 
 .video-modal-content {
-  position: relative;
-  max-width: 95vw;
-  max-height: 95vh;
-  width: auto;
-  height: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 600px;
+  max-width: 90vw;
+  max-height: 90vh;
   background: #25282e;
   border-radius: 20px;
   padding: 20px;
@@ -36,6 +39,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 100000;
   box-sizing: border-box;
 }
 
@@ -66,16 +70,14 @@
 
 .video-modal-video {
   width: 100%;
-  height: auto;
-  max-width: 85vw;
-  max-height: 75vh;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 10px;
   outline: none;
   object-fit: contain;
   display: block;
   margin: 0 auto;
-  min-width: 300px;
-  min-height: 200px;
 }
 
 @keyframes fadeIn {

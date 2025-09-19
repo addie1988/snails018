@@ -248,11 +248,13 @@ a:hover
 
 // 彈出視窗樣式
 .modal-overlay
-    position: fixed
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
+    position: fixed !important
+    top: 0 !important
+    left: 0 !important
+    right: 0 !important
+    bottom: 0 !important
+    width: 100vw !important
+    height: 100vh !important
     background-color: rgba(0, 0, 0, 0.8)
     display: flex
     justify-content: center
@@ -260,24 +262,33 @@ a:hover
     z-index: 2000
     backdrop-filter: blur(5px)
     -webkit-backdrop-filter: blur(5px)
+    overflow: hidden
+    // 防止背景滾動
+    overscroll-behavior: contain
+    -webkit-overflow-scrolling: touch
 
 .modal-content
     background-color: #191b1f
-    border-radius: 15px
-    width: 500px
-    height: 500px
-    overflow-y: auto
+    border-radius: 20px
+    width: 400px
+    overflow: hidden
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5)
     border: 1px solid #575757
-    border-radius: 20px
     animation: modalSlideIn 0.3s ease-out
     display: flex
-    align-items: center
-    justify-content: center
+    flex-direction: column
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 2001
+    // 確保在螢幕中完美置中
+    margin: 0
+    // 防止內容滾動
+    overscroll-behavior: contain
 
 .modal-video
     position: relative
-    width: 64%
     z-index: 3
 
     .modal-video_content
@@ -317,6 +328,12 @@ a:hover
 
 .modal-body
     padding: 25px
+    flex: 1
+    overflow-y: auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
 
 .modal-image
     text-align: center
@@ -715,7 +732,6 @@ a:hover
         .modal-overlay
             .modal-content
                 width: 100%
-                height: 100%
                 border-radius: 0
 
 // ============================================================================================= >>   
@@ -980,6 +996,119 @@ a:hover
     75%
         transform: rotateZ(5deg)
 
+// 通用彈跳視窗樣式
+.modal-overlay
+    position: fixed !important
+    top: 0 !important
+    left: 0 !important
+    right: 0 !important
+    bottom: 0 !important
+    width: 100vw !important
+    height: 100vh !important
+    background-color: rgba(0, 0, 0, 0.8)
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 2000
+    backdrop-filter: blur(5px)
+    -webkit-backdrop-filter: blur(5px)
+    // 防止背景滾動
+    overscroll-behavior: contain
+    -webkit-overflow-scrolling: touch
+
+.modal-content
+    background-color: #191b1f
+    border-radius: 20px
+    width: 90%
+    max-width: 500px
+    height: 90%
+    max-height: 500px
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5)
+    display: flex
+    flex-direction: column
+    border: 1px solid #575757
+    animation: modalSlideIn 0.3s ease-out
+    margin: auto
+    // 防止內容滾動
+    overscroll-behavior: contain
+    text-align: center
+
+.modal-header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 20px 25px
+    border-bottom: 1px solid #575757
+    text-align: center
+    flex-shrink: 0
+
+    h3
+        color: #fff
+        margin: 0 auto
+        font-size: 1.5rem
+        font-weight: bold
+
+.modal-close
+    background: none
+    border: none
+    color: #fff
+    font-size: 2rem
+    cursor: pointer
+    padding: 0
+    width: 30px
+    height: 30px
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: transform 0.2s ease
+
+    &:hover
+        transform: rotate(90deg)
+
+.modal-body
+    padding: 25px
+    text-align: center
+    flex: 1
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+
+.modal-image
+    text-align: center
+    margin-bottom: 20px
+
+    img
+        max-width: 200px
+        height: auto
+        border-radius: 10px
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3)
+        margin: 0 auto
+
+.modal-text
+    text-align: center
+
+    h4
+        color: $main
+        font-size: 1.3rem
+        margin: 0 auto 15px
+        font-weight: bold
+
+    p
+        color: #fff
+        font-size: 1rem
+        line-height: 1.6
+        margin: 0 auto
+
+// 彈跳視窗動畫
+@keyframes modalSlideIn
+    from
+        opacity: 0
+        transform: scale(0.8) translateY(-50px)
+    to
+        opacity: 1
+        transform: scale(1) translateY(0)
+
 // Professionals 彈出視窗樣式
 .professionals-popup-overlay
     position: fixed
@@ -1007,9 +1136,11 @@ a:hover
     justify-content: center
     border: 1px solid #575757
     animation: professionalsPopupSlideIn 0.3s ease-out
+    text-align: center
 
 .professionals-popup-content-area
     width: 64%
+    margin: 0 auto
 
 .professionals-popup-header
     display: flex
@@ -1021,7 +1152,7 @@ a:hover
 
     h3
         color: #fff
-        margin: 0
+        margin: 0 auto
         font-size: 1.5rem
         font-weight: bold
 
@@ -1057,6 +1188,7 @@ a:hover
         height: auto
         border-radius: 10px
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3)
+        margin: 0 auto
 
 .professionals-popup-text
     text-align: center
@@ -1064,23 +1196,24 @@ a:hover
     h4
         color: $main
         font-size: 1.3rem
-        margin: 0 0 15px 0
+        margin: 0 auto 15px
         font-weight: bold
 
     p
         color: #fff
         line-height: 1.6
-        margin: 0 0 15px 0
+        margin: 0 auto 15px
         font-size: 1rem
 
     ul
         list-style: none
         padding: 0
-        margin: 20px 0 0 0
+        margin: 20px auto 0
+        text-align: center
 
         li
             color: #fff
-            margin: 8px 0
+            margin: 8px auto
             padding-left: 10px
             font-size: 0.95rem
 
@@ -1171,16 +1304,18 @@ a:hover
                                     font-size: 1em
                         .professionals_content_text_p
                             display: flex
+                            flex-wrap: wrap
                             .professionals_content_text_p_content
                                 .professionals_content_text_p_content_p
                                     p
                                         font-size: 1em
                                         text-align: center
                             .professionals_content_text_svg
-                                position: absolute
-                                top: 240px
-                                left: calc(50% - 150px)
+                                position: relative
+                                top: 50px
+                                left: 0px
                                 bottom: 100px
+                                width: 100%
                                 .professionals_content_text_svg_content
                                     img
                                         width: 16em
@@ -1193,7 +1328,9 @@ a:hover
                     .professionals_content_text_content_area
                         .professionals_content_text_svg
                             .professionals_content_text_svg_content
-                                img
+        .modal-overlay
+            .modal-content
+                width: 90%
         .professionals-popup-overlay
             .professionals-popup-content
                 width: 100%
@@ -1209,11 +1346,13 @@ a:hover
 
 // Office 彈跳視窗樣式
 .office-modal-overlay
-    position: fixed
-    top: 0
-    left: 0
-    width: 100%
-    height: 100%
+    position: fixed !important
+    top: 0 !important
+    left: 0 !important
+    right: 0 !important
+    bottom: 0 !important
+    width: 100vw !important
+    height: 100vh !important
     background-color: rgba(0, 0, 0, 0.9)
     display: flex
     justify-content: center
@@ -1221,6 +1360,9 @@ a:hover
     z-index: 2000
     backdrop-filter: blur(5px)
     -webkit-backdrop-filter: blur(5px)
+    // 防止背景滾動
+    overscroll-behavior: contain
+    -webkit-overflow-scrolling: touch
 
 .office-modal-content
     background: #fff
@@ -1233,6 +1375,10 @@ a:hover
     flex-direction: column
     overflow: hidden
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3)
+    // 確保在螢幕中完美置中
+    margin: 0
+    // 防止內容滾動
+    overscroll-behavior: contain
 
 .office-modal-header
     display: flex
@@ -1309,6 +1455,57 @@ a:hover
 
 .office-modal-next
     right: 20px
+
+// 響應式設計 - 通用彈跳視窗
+@media (max-width: 768px)
+    .modal-overlay
+        .modal-content
+            width: 95%
+            height: 95%
+            border-radius: 15px
+
+    .modal-header
+        padding: 15px 20px
+
+        h3
+            font-size: 1.3rem
+
+    .modal-body
+        padding: 20px
+
+    .modal-image
+        img
+            max-width: 150px
+
+    .modal-text
+        p
+            font-size: 0.9rem
+
+// 響應式設計 - Office 彈跳視窗
+@media (max-width: 768px)
+    .office-modal-overlay
+        .office-modal-content
+            width: 95%
+            height: 95%
+            border-radius: 15px
+
+    .office-modal-header
+        padding: 15px 20px
+
+        h3
+            font-size: 1.3rem
+
+    .office-modal-prev,
+    .office-modal-next
+        width: 40px
+        height: 40px
+        font-size: 1.5rem
+
+    .office-modal-prev
+        left: 10px
+
+    .office-modal-next
+        right: 10px
 
 // ============================================================================================= >>   
 
@@ -2662,7 +2859,7 @@ a:hover
             .game_3_content_text
                 .game_3_content_text_content
                     h1
-                        font-size: 3em
+                        font-size: 36px
                     ul
                         display: block
                         li
@@ -3176,6 +3373,9 @@ a:hover
             .creation_content_text
                 width: 90%
                 order: 2
+                .creation_content_text_content
+                    h1
+                        font-size: 36px
 
             .creation_content_video
                 width: 90%
@@ -3339,6 +3539,9 @@ a:hover
             .pallium_play_content_text
                 width: 90%
                 padding-top: 60px
+                .pallium_play_content_text_content
+                    h1
+                        font-size: 36px
 
 // ============================================================================================= >>    
 
@@ -4229,7 +4432,7 @@ a:hover
                 .community_content_ul_content
                     ul
                         li
-                            width: 30%
+                            width: auto
                             height: auto
                             background: none
                             border: none

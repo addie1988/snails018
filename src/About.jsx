@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import about_content_text_img_1 from "../src/images/about_content_text_img_1.svg";
 import about_content_text_img_2 from "../src/images/about_content_text_img_2.webp";
 import about_content_text_img_3 from "../src/images/about_content_text_img_3.webp";
@@ -14,6 +14,36 @@ export default function About() {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
+  // 滾動鎖定效果
+  useEffect(() => {
+    if (isModalOpen) {
+      // 鎖定背景滾動
+      document.body.style.overflow = 'hidden';
+      // 防止 iOS Safari 的彈跳效果
+      document.body.style.position = 'fixed';
+      document.body.style.top = '0';
+      document.body.style.left = '0';
+    } else {
+      // 恢復背景滾動
+      document.body.style.overflow = 'auto';
+      document.body.style.position = 'static';
+      document.body.style.width = 'auto';
+      document.body.style.height = 'auto';
+      document.body.style.top = 'auto';
+      document.body.style.left = 'auto';
+    }
+
+    // 清理函數
+    return () => {
+      document.body.style.overflow = 'auto';
+      document.body.style.position = 'static';
+      document.body.style.width = 'auto';
+      document.body.style.height = 'auto';
+      document.body.style.top = 'auto';
+      document.body.style.left = 'auto';
+    };
+  }, [isModalOpen]);
   return (
     <div className="about">
       <div className="about_content">

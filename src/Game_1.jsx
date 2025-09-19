@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Game_mods from "./Game_mods";
 import Video_modularity from "./Video_modularity";
+import useScrollLock from "./useScrollLock";
 
 export default function Game_1() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -22,6 +23,9 @@ export default function Game_1() {
   const goToSlide = (index) => {
     setCurrentSlide(index);
   };
+
+  // 使用統一的滾動鎖定 Hook
+  useScrollLock(isModalOpen);
 
   // 處理影片彈跳視窗
   const handleImageClick = (index) => {

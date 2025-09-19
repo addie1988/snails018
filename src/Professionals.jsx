@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import useScrollLock from "./useScrollLock";
 
 import professionals_content_img_1 from "./images/professionals_1.webp";
 import professionals_content_img_2 from "./images/professionals_2.webp"; 
@@ -24,6 +25,9 @@ function Professionals() {
   const [isImageSequenceComplete, setIsImageSequenceComplete] = useState(false);
   const sectionRefs = useRef([]);
   const lastScrollY = useRef(0);
+
+  // 使用統一的滾動鎖定 Hook
+  useScrollLock(isModalOpen);
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -101,7 +105,6 @@ function Professionals() {
           }`}
           ref={(el) => (sectionRefs.current[0] = el)}
           data-section="0"
-          style={{height: "100vh"}}
         >
           <div className="professionals_content_title_content">
             <h2>1300+</h2>
@@ -114,7 +117,6 @@ function Professionals() {
           }`}
           ref={(el) => (sectionRefs.current[1] = el)}
           data-section="1"
-          style={{height: "100vh"}}
         >
           <div className="professionals_content_img_content">
             <ul>
@@ -151,10 +153,6 @@ function Professionals() {
                     <img 
                       src={img} 
                       alt={`img${index + 1}`}
-                      style={{
-                        transform: "scale(2.4)",
-                        transition: "transform 0.5s ease" // 延長圖片縮放動畫
-                      }}
                     />
                   </li>
                 );
@@ -183,7 +181,6 @@ function Professionals() {
           }`}
           ref={(el) => (sectionRefs.current[2] = el)}
           data-section="2"
-          style={{height: "100vh"}}
         >
           <div className="professionals_content_text_content">
             <div className="professionals_content_text_content_area">
@@ -216,7 +213,6 @@ function Professionals() {
                       src={professionals_content_img_15}
                       alt="svg"
                       onClick={openModal}
-                      style={{ cursor: "pointer" }}
                     />
                   </div>
                 </div>
@@ -228,31 +224,29 @@ function Professionals() {
 
       {/* 彈出視窗 */}
       {isModalOpen && (
-        <div className="professionals-popup-overlay" onClick={closeModal}>
+        <div className="modal-overlay" onClick={closeModal}>
           <div
-            className="professionals-popup-content"
+            className="modal-content"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="professionals-popup-content-area">
-              <div className="professionals-popup-header">
-                <h3>Professional Team Details</h3>
-                <button
-                  className="professionals-popup-close"
-                  onClick={closeModal}
-                >
-                  ×
-                </button>
+            <div className="modal-header">
+              <h3>Professional Team Details</h3>
+              <button
+                className="modal-close"
+                onClick={closeModal}
+              >
+                ×
+              </button>
+            </div>
+            <div className="modal-body">
+              <div className="modal-image">
+                <img src={professionals_content_img_15} alt="svg" />
               </div>
-              <div className="professionals-popup-body">
-                <div className="professionals-popup-image">
-                  <img src={professionals_content_img_15} alt="svg" />
-                </div>
-                <div className="professionals-popup-text">
-                  <p>
-                    45% of Plarium employees have been with us for over five
-                    years
-                  </p>
-                </div>
+              <div className="modal-text">
+                <p>
+                  45% of Plarium employees have been with us for over five
+                  years
+                </p>
               </div>
             </div>
           </div>

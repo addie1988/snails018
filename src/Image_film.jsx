@@ -5,6 +5,7 @@ import image_film_3 from "./images/image_film_3.webp";
 import image_film_4 from "./images/image_film_4.webp";
 import image_film_5 from "./images/image_film_5.webp";
 import Video_modularity from "./Video_modularity";
+import useScrollLock from "./useScrollLock";
 
 export default function Image_film() {
     const carouselRef = useRef(null);
@@ -64,18 +65,19 @@ export default function Image_film() {
         };
     }, []);
 
+    // 使用統一的滾動鎖定 Hook
+    useScrollLock(isModalOpen);
+
     // 點擊圖片開啟影片彈窗
     const handleImageClick = (video) => {
         setCurrentVideo(video);
         setIsModalOpen(true);
-        document.body.style.overflow = 'hidden'; // 防止背景滾動
     };
 
     // 關閉影片彈窗
     const handleCloseModal = () => {
         setIsModalOpen(false);
         setCurrentVideo("");
-        document.body.style.overflow = 'auto'; // 恢復背景滾動
     };
 
     return (

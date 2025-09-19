@@ -2,12 +2,16 @@ import { useState, useEffect } from "react";
 import Game_mods from "./Game_mods";
 import game_2_content_video_1 from "./images/game_2_content_video_1.webp";
 import Video_modularity from "./Video_modularity";
+import useScrollLock from "./useScrollLock";
 
 export default function Game_1() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedVideo, setSelectedVideo] = useState("");
+
+  // 使用統一的滾動鎖定 Hook
+  useScrollLock(isModalOpen);
 
   const handleImageClick = (index) => {
     setSelectedVideo(Game_mods.carouselData.videos[index]);
